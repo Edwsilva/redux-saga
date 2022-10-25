@@ -1,4 +1,4 @@
-import * as types from '../../types'
+import * as types from '../../../redux'
 
 export type UserType = {
     name: string
@@ -7,10 +7,13 @@ export type UserType = {
 }
 
 export function getUserRequest(name: string): {
+    // Qual a action a ser chamada
     type: string
+    // Qual o dado passado
     payload: string
 } {
     return {
+        // Quem estou chamando
         type: types.GET_USER_REQUEST,
         payload: name
     }
